@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'AppDADO';
+  src: url('/fonts/AppDADO-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABCArizonaFlare';
+  src: url('/fonts/ABCArizonaFlare-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-brand: #d4cfc6;
+  --color-accent: #2c2c2c;
+  --font-sans: 'AppDADO', system-ui, sans-serif;
+  --font-serif: 'ABCArizonaFlare', serif;
+}
+
+@layer base {
+  :root {
+    --background: #F6F5F2;
+    --foreground: #2c2c2c;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Base custom text selection for luxury feel */
+::selection {
+  background: #2c2c2c;
+  color: #fff;
+}

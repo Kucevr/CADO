@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#141414"/>
+  <!-- 2x2 grid: c o / d a (perfectly mathematical scale from original logo) -->
+  <g fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round">
+    <!-- c -->
+    <path d="M 213.25 122.75 A 64 64 0 1 0 213.25 213.25" />
+    <!-- o -->
+    <circle cx="344" cy="168" r="64" />
+    <!-- d -->
+    <circle cx="168" cy="344" r="64" />
+    <line x1="232" y1="232" x2="232" y2="408" />
+    <!-- a -->
+    <circle cx="344" cy="344" r="64" />
+    <line x1="408" y1="280" x2="408" y2="408" />
+  </g>
+</svg>
