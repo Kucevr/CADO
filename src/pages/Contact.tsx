@@ -58,9 +58,9 @@ const Contact = () => {
               <h3 className="text-xl uppercase tracking-widest text-[#F6F5F2]/50 mb-4">Location</h3>
               <p className="text-2xl font-serif">
                 Studio CODA<br/>
-                800 South Douglas Road,<br/>
-                Suite 130, La Puerta Del Sol<br/>
-                Coral Gables, FL 33134
+                Praspyekt Nyezalyezhnastsi 116,<br/>
+                Minsk<br/>
+                Belarus 220114
               </p>
             </div>
 

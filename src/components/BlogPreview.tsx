@@ -11,19 +11,19 @@ const blogPosts = [
     id: "romance-of-travel",
     date: "Feb 26, 2026",
     title: "Slow Luxury: What Heritage Railways Reveal About Modern Hospitality and Sensory Design",
-    image: "https://images.unsplash.com/photo-1533604101087-43be4c1fb3a7?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/blog/blog-romance-of-travel.jpeg",
   },
   {
     id: "maximalism",
     date: "Nov 12, 2025",
     title: "The Return of Richness: Why Layered, Textured Interiors Are Defining a New Era of Design",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/blog/blog-maximalism.jpeg",
   },
   {
     id: "miami-design",
     date: "Oct 21, 2025",
     title: "Coastal Modernism: How Miami's Design Scene Became a Crossroads of Art, Food, and Architecture",
-    image: "https://images.unsplash.com/photo-1568849676085-51415703900f?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/blog/blog-miami-design.jpeg",
   },
 ];
 
@@ -71,7 +71,7 @@ const BlogPreview = () => {
                 trigger: card,
                 start: "top bottom",
                 end: "bottom top",
-                scrub: true,
+                scrub: 1,
               }
             }
           );
@@ -82,9 +82,9 @@ const BlogPreview = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-24 px-[3%] bg-white text-black overflow-hidden mt-20">
+    <section ref={containerRef} className="py-24 px-[3%] bg-white text-black overflow-hidden">
       
-      <h2 className="blog-heading font-serif text-[6.5vw] leading-[1.0] lg:leading-[0.9] tracking-tight uppercase mb-32 max-w-[98%]">
+      <h2 className="blog-heading font-serif text-[6.5vw] leading-none lg:leading-[0.9] tracking-tight uppercase mb-32 max-w-[98%]">
         Our journal is a living archive where ideas about craft, culture, and the future of spatial design take shape.
       </h2>
 
@@ -113,7 +113,7 @@ const BlogPreview = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {blogPosts.map((post) => (
           <Link key={post.id} to={`/blog/${post.id}`} className="blog-card group block">
-            <div className="overflow-hidden bg-gray-100 aspect-[4/5] relative w-full mb-6">
+            <div className="overflow-hidden bg-gray-100 aspect-4/5 relative w-full mb-6">
               <img
                 src={post.image}
                 alt={post.title}

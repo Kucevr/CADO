@@ -38,7 +38,7 @@ const AboutSection = () => {
             trigger: ".parallax-container",
             start: "top bottom",
             end: "bottom top",
-            scrub: true
+            scrub: 1
           }
         }
       );
@@ -51,7 +51,7 @@ const AboutSection = () => {
       
       {/* Upper Giant Text Section */}
       <div className="w-full mb-32 fade-in-text">
-        <h2 className="font-serif text-[6vw] leading-[1.0] lg:leading-[0.95] tracking-tight uppercase max-w-[95%]">
+        <h2 className="font-serif text-[6vw] leading-none lg:leading-[0.95] tracking-tight uppercase max-w-[95%]">
           Intention drives every surface, every shadow, every moment of stillness in the rooms we build.
         </h2>
         
@@ -59,7 +59,7 @@ const AboutSection = () => {
         <div className="mt-20 flex justify-center w-full fade-in-text">
           <div className="parallax-container aspect-[3/4] w-[35%] md:w-[25%] lg:w-[20%] overflow-hidden relative group">
             <img
-              src="https://images.unsplash.com/photo-1620626011761-9ea0189a7448?q=80&w=1200&auto=format&fit=crop"
+              src="public/assets/about/chandelier-detail.jpeg"
               alt="Chandelier Detail"
               className="parallax-img absolute inset-0 w-full h-[130%] object-cover transition-opacity duration-300 group-hover:opacity-80"
             />

@@ -19,12 +19,21 @@ const Projects = () => {
         description="Explore our curated portfolio of residential and commercial architecture projects." 
         url="https://coda-architecture.vercel.app/projects" 
       />
-      <div className="px-[3%]">
+      {/* Hero Banner with local asset */}
+      <div className="relative w-full h-[60vh] mb-32 group overflow-hidden -mx-[3%]">
+        <img 
+          src="/assets/hero/project-hero.jpeg" 
+          alt="All Projects" 
+          className="w-full h-full object-cover grayscale brightness-75 transition-transform duration-1000 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="px-[3%] max-w-[1400px] mx-auto">
         <ProjectsHero />
         <ProjectsGrid />
         
         <div className="-mx-[3%] my-32">
-          <ParallaxImageBlock src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=2600&auto=format&fit=crop" height="h-[60vh] md:h-[80vh]" />
+          <ParallaxImageBlock src="/assets/hero/project-hero.jpeg" height="h-[60vh] md:h-[80vh]" />
         </div>
 
         <ProjectsStats />

@@ -11,28 +11,28 @@ const projects = [
     id: "ember-pavilion",
     title: "Ember Pavilion",
     category: "Hotel Lobbies",
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/projects/project-1-main.jpeg",
     className: "col-span-2 row-span-2 aspect-[4/5]",
   },
   {
     id: "velora-residence",
     title: "Velora Residence",
     category: "Private Suites",
-    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/projects/project-2-main.jpeg",
     className: "col-span-1 row-span-1 aspect-square",
   },
   {
     id: "still-waters-retreat",
     title: "Still Waters Retreat",
     category: "Spa & Wellness",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/projects/project-3-main.jpeg",
     className: "col-span-1 row-span-1 aspect-square",
   },
   {
     id: "noma-brasserie",
     title: "Noma Brasserie",
     category: "Fine Dining",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/projects/project-4-main.jpeg",
     className: "col-span-2 row-span-1 aspect-[2/1] mt-8",
   },
 ];
@@ -84,7 +84,7 @@ const ProjectsPreview = () => {
                 trigger: card,
                 start: "top bottom",
                 end: "bottom top",
-                scrub: true,
+                scrub: 1,
               }
             }
           );

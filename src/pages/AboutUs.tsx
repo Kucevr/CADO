@@ -20,6 +20,14 @@ const AboutUs = () => {
         url="https://coda-architecture.vercel.app/about" 
       />
       <div className="px-[3%] max-w-7xl mx-auto">
+        {/* Banner with local about image */}
+        <div className="w-full aspect-[21/9] overflow-hidden mb-24 grayscale brightness-75">
+          <img 
+            src="/assets/hero/about-hero.jpeg" 
+            alt="About CODA Studio" 
+            className="w-full h-full object-cover"
+          />
+        </div>
         <AboutHero />
         <AboutCulture />
         <AboutTeam />

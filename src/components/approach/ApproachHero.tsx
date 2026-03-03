@@ -43,7 +43,7 @@ export const ApproachHero = () => {
 
       <div className="parallax-container w-full h-[60vh] md:h-[80vh] overflow-hidden relative mb-32">
         <img 
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2000&auto=format&fit=crop" 
+          src="/assets/hero/approach-hero.jpeg" 
           alt="Studio CODA Design Process" 
           className="parallax-bg absolute top-[-20%] left-0 w-full h-[140%] object-cover"
         />

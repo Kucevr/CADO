@@ -40,6 +40,16 @@ body {
   overflow-x: hidden;
 }
 
+/* GPU acceleration for parallax elements */
+.parallax-image,
+.parallax-img,
+.hero-image-parallax,
+.hero-image-scale {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
 /* Base custom text selection for luxury feel */
 ::selection {
   background: #2c2c2c;

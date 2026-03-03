@@ -39,7 +39,7 @@ const CallToAction = () => {
         <div className="w-full md:w-[40%]">
           <div className="aspect-[4/5] w-full overflow-hidden bg-gray-100">
             <img 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" 
+              src="/assets/about/atelier-team.jpeg" 
               alt="Studio CODA team working" 
               className="w-full h-full object-cover grayscale"
             />

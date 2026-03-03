@@ -1,8 +1,17 @@
 import { useState, useEffect } from "react";
 import { TransitionLink as Link } from "./TransitionLink";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { gsap } from "gsap";
 import { Logo } from "./ui/Logo";
+
+const NAV_LINKS = [
+  { label: "Projects",  to: "/projects"  },
+  { label: "Approach",  to: "/approach"  },
+  { label: "About Us",  to: "/about-us"  },
+  { label: "News",      to: "/news"      },
+  { label: "Blog",      to: "/blog"      },
+  { label: "Contact",   to: "/contact"   },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,170 +23,132 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // Hide if scrolling down past 100px and menu isn't open
-      if (currentScrollY > lastScrollY && currentScrollY > 100 && !isOpen) {
-        setIsHidden(true);
-      } 
-      // Show if scrolling up
-      else if (currentScrollY < lastScrollY) {
-        setIsHidden(false);
-      }
-      
-      setLastScrollY(currentScrollY);
+      const y = window.scrollY;
+      if (y > lastScrollY && y > 100 && !isOpen) setIsHidden(true);
+      else if (y < lastScrollY) setIsHidden(false);
+      setLastScrollY(y);
     };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY, isOpen]);
 
   useEffect(() => {
-    // Initial fade in for Navbar text
-    gsap.fromTo(
-      ".navbar-inner",
-      { opacity: 0 },
-      { opacity: 1, duration: 1.0, ease: "none", delay: 0.5 }
-    );
+    gsap.fromTo(".navbar-inner", { opacity: 0 }, { opacity: 1, duration: 1.0, ease: "none", delay: 0.5 });
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [isOpen]);
+
   return (
-    <header className={`navbar fixed top-0 w-full z-50 py-8 mix-blend-difference text-white pointer-events-none transition-transform duration-700 ease-[0.16,1,0.3,1] ${isHidden ? '-translate-y-full' : 'translate-y-0'}`}>
-      <div className="navbar-inner w-full px-[3%]">
-        <div className="flex justify-between items-start h-full pointer-events-none">
-          
-          {/* Left: Studio CODA text */}
-          <div className="w-[20%] pointer-events-auto">
-            <Link 
-              to="/" 
-              onMouseEnter={() => setHoveredLink("Studio CODA")}
+    <>
+      {/* Header — z-[70] always above mobile overlay z-[60] */}
+      <header
+        className={`fixed top-0 w-full z-70 py-3 lg:mix-blend-difference text-white pointer-events-none transition-transform duration-700 ease-[0.16,1,0.3,1] ${
+          isHidden ? "-translate-y-full" : "translate-y-0"
+        }`}
+      >
+        <div className="navbar-inner w-full px-[3%]">
+
+          {/* Desktop */}
+          <div className="hidden lg:flex items-center justify-between pointer-events-none">
+
+            <Link
+              to="/"
+              onMouseEnter={() => setHoveredLink("Studio")}
               onMouseLeave={() => setHoveredLink(null)}
-              className={`text-[22px] font-medium tracking-wide transition-opacity duration-300 relative flex items-center w-fit ${
-                hoveredLink && hoveredLink !== "Studio CODA" ? "opacity-30" : "opacity-100"
+              className={`pointer-events-auto text-[18px] font-medium tracking-wide whitespace-nowrap transition-opacity duration-300 ${
+                hoveredLink && hoveredLink !== "Studio" ? "opacity-30" : "opacity-100"
               }`}
             >
-              <div 
-                className={`absolute -left-4 w-1.5 h-1.5 bg-white rounded-full transition-all duration-300 ${
-                  hoveredLink === "Studio CODA" ? "opacity-100 scale-100" : "opacity-0 scale-50"
-                }`} 
-              />
-              <span>Studio CODA</span>
+              Studio CODA
             </Link>
-          </div>
 
-          {/* Left-Center: Logo */}
-          <div className="w-[10%] flex justify-center pointer-events-auto">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               onMouseEnter={() => setHoveredLink("Logo")}
               onMouseLeave={() => setHoveredLink(null)}
-              className={`transition-opacity duration-300 relative flex items-center ${
+              className={`pointer-events-auto flex items-center transition-opacity duration-300 ${
                 hoveredLink && hoveredLink !== "Logo" ? "opacity-30" : "opacity-100"
               }`}
             >
               <Logo />
             </Link>
-          </div>
 
-          {/* Center: Main Links Column */}
-          <div className="hidden lg:flex flex-col space-y-2 w-[20%] items-center text-[20px] font-medium tracking-wide pointer-events-auto">
-            <div className="flex flex-col items-start w-[100px]">
-              {["Projects", "Approach", "About Us"].map((item) => (
-                <div key={item} className="w-full relative h-[30px]">
-                  <Link
-                    to={`/${item.toLowerCase().replace(" ", "-")}`}
-                    onMouseEnter={() => setHoveredLink(item)}
-                    onMouseLeave={() => setHoveredLink(null)}
-                    className={`absolute left-0 group flex items-center transition-opacity duration-300 whitespace-nowrap ${
-                      hoveredLink && hoveredLink !== item ? "opacity-30" : "opacity-100"
+            <nav className="flex items-center gap-7 pointer-events-auto">
+              {NAV_LINKS.map(({ label, to }) => (
+                <Link
+                  key={label}
+                  to={to}
+                  onMouseEnter={() => setHoveredLink(label)}
+                  onMouseLeave={() => setHoveredLink(null)}
+                  className={`relative flex items-center text-[18px] font-medium tracking-wide whitespace-nowrap transition-opacity duration-300 ${
+                    hoveredLink && hoveredLink !== label ? "opacity-30" : "opacity-100"
+                  }`}
+                >
+                  <div
+                    className={`absolute -left-3.5 w-1.5 h-1.5 bg-white rounded-full transition-all duration-300 ${
+                      hoveredLink === label ? "opacity-100 scale-100" : "opacity-0 scale-50"
                     }`}
-                  >
-                    <div 
-                      className={`absolute -left-4 w-1.5 h-1.5 bg-white rounded-full transition-all duration-300 ${
-                        hoveredLink === item ? "opacity-100 scale-100" : "opacity-0 scale-50"
-                      }`} 
-                    />
-                    {item}
-                  </Link>
-                </div>
+                  />
+                  {label}
+                </Link>
               ))}
-            </div>
+            </nav>
           </div>
 
-          {/* Center-Right: Secondary Links Column */}
-          <div className="hidden lg:flex flex-col space-y-2 w-[20%] items-center text-[20px] font-medium tracking-wide pointer-events-auto">
-            <div className="flex flex-col items-start w-[70px]">
-              {["News", "Blog"].map((item) => (
-                <div key={item} className="flex justify-start w-fit relative h-[30px]">
-                  <Link
-                    to={`/${item.toLowerCase().replace(" ", "-")}`}
-                    onMouseEnter={() => setHoveredLink(item)}
-                    onMouseLeave={() => setHoveredLink(null)}
-                    className={`absolute left-0 group flex items-center transition-opacity duration-300 whitespace-nowrap ${
-                      hoveredLink && hoveredLink !== item ? "opacity-30" : "opacity-100"
-                    }`}
-                  >
-                    <div 
-                      className={`absolute -left-4 w-1.5 h-1.5 bg-white rounded-full transition-all duration-300 ${
-                        hoveredLink === item ? "opacity-100 scale-100" : "opacity-0 scale-50"
-                      }`} 
-                    />
-                    <span>{item}</span>
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right: Contact */}
-          <div className="w-[20%] flex justify-end pointer-events-auto">
-            <Link 
-              to="/contact" 
-              onMouseEnter={() => setHoveredLink("Contact")}
-              onMouseLeave={() => setHoveredLink(null)}
-              className={`relative group flex items-center text-[20px] font-medium tracking-wide transition-opacity duration-300 ${
-                hoveredLink && hoveredLink !== "Contact" ? "opacity-30" : "opacity-100"
-              }`}
-            >
-              <div 
-                className={`absolute -left-4 w-1.5 h-1.5 bg-white rounded-full transition-all duration-300 ${
-                  hoveredLink === "Contact" ? "opacity-100 scale-100" : "opacity-0 scale-50"
-                }`} 
-              />
-              Contact
+          {/* Mobile */}
+          <div className="flex lg:hidden items-center justify-between pointer-events-none">
+            <Link to="/" onClick={() => setIsOpen(false)} className="pointer-events-auto flex items-center">
+              <Logo />
             </Link>
-          </div>
-
-          {/* Mobile Menu Toggle */}
-          <div className="lg:hidden flex items-center justify-end w-[70%] z-[60] pointer-events-auto">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-white hover:opacity-75 focus:outline-none mix-blend-difference min-w-[44px] min-h-[44px] flex items-center justify-center">
-              {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+            <button
+              onClick={() => setIsOpen((v) => !v)}
+              className="pointer-events-auto text-white focus:outline-none min-w-11 min-h-11 flex items-center justify-end"
+              aria-label="Toggle menu"
+            >
+              {isOpen
+                ? <span className="text-[18px] font-medium">Close</span>
+                : <Menu className="h-7 w-7" />
+              }
             </button>
           </div>
-        </div>
-      </div>
 
-      {/* Mobile Menu Overlay */}
-      <div 
-        className={`fixed inset-0 z-[50] flex flex-col justify-center items-center transition-all duration-700 ease-[0.16,1,0.3,1] pointer-events-auto lg:hidden overflow-hidden ${
-          isOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'
-        }`}
-        style={{ backgroundColor: '#111' }}
-      >
-        <div className="space-y-6 flex flex-col items-center">
-          {["Projects", "Approach", "About Us", "News", "Blog", "Contact"].map((item) => (
-            <Link
-              key={item}
-              to={`/${item.toLowerCase().replace(" ", "-")}`}
-              onClick={() => setIsOpen(false)}
-              className="text-4xl font-serif text-white uppercase tracking-widest hover:text-gray-400 transition-colors"
-            >
-              {item}
-            </Link>
-          ))}
         </div>
+      </header>
+
+      {/* Mobile overlay — z-[60] */}
+      <div
+        className={`fixed inset-0 z-60 flex flex-col justify-between px-[6vw] pt-[24vw] pb-[10vw] lg:hidden overflow-hidden transition-all duration-700 ease-[0.16,1,0.3,1] ${
+          isOpen
+            ? "translate-y-0 opacity-100 visible pointer-events-auto"
+            : "-translate-y-full opacity-0 invisible pointer-events-none"
+        }`}
+        style={{ backgroundColor: "#000" }}
+      >
+        <div>
+          <p className="text-white/40 mb-8 tracking-widest text-xs uppercase">Navigate</p>
+          <nav className="flex flex-col items-start gap-4">
+            {NAV_LINKS.map(({ label, to }) => (
+              <Link
+                key={label}
+                to={to}
+                onClick={() => setIsOpen(false)}
+                className="font-serif text-[14vw] leading-none text-white uppercase tracking-tight hover:opacity-50 transition-opacity"
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        <address className="not-italic text-base text-white/60 leading-relaxed">
+          Praspyekt Nyezalyezhnastsi 116<br />
+          Minsk, Belarus 220114
+        </address>
       </div>
-    </header>
+    </>
   );
 };
 

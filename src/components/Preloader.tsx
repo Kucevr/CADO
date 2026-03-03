@@ -100,7 +100,7 @@ export const Preloader = () => {
           </div>
           <div ref={pushInfoRef} className="flex flex-col text-right">
             <span className="opacity-50">EST.</span>
-            <span>2016</span>
+            <span>2025</span>
           </div>
         </div>
 
@@ -108,7 +108,7 @@ export const Preloader = () => {
         <div className="flex justify-between items-end w-full uppercase tracking-widest text-[10px] md:text-xs">
           <div ref={pushInfoRef} className="flex flex-col">
             <span className="opacity-50">Location</span>
-            <span>Coral Gables, FL</span>
+            <span>Minsk, BLR</span>
           </div>
           <div ref={pushInfoRef} className="flex flex-col text-right">
             <span className="opacity-50">Status</span>

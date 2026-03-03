@@ -66,7 +66,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="hero-image-scale w-full h-full">
           <img
-            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2600&auto=format&fit=crop"
+            src="/assets/hero/home-hero.jpeg"
             alt="CODA Studio — Luxury Resort Interior"
             className="hero-image-parallax w-full h-[125%] object-cover opacity-80 -top-[12.5%] relative"
           />
@@ -87,7 +87,7 @@ const Hero = () => {
         {/* Center Column */}
         <div className="hero-text-block w-full md:w-2/4 flex flex-col items-center text-center">
           <span className="text-[14px] tracking-[0.1em] font-medium mb-2 uppercase">Vision</span>
-          <p className="text-xl md:text-2xl lg:text-[32px] mb-4 max-w-[800px] font-medium leading-[1.2] text-white">
+          <p className="text-xl md:text-2xl lg:text-[32px] mb-2 max-w-[800px] font-medium leading-[1.2] text-white">
             We design atmospheres that<br className="max-md:hidden"/> blur the line between emotion<br className="max-md:hidden"/> and architecture, crafted to endure.
           </p>
         </div>
@@ -117,7 +117,7 @@ const Hero = () => {
       
       {/* Bottom Text - completely centered and taking up width */}
       <div className="relative z-10 w-full text-center pb-[2vh] overflow-hidden pointer-events-none">
-        <h1 className="giant-text font-serif text-[13.5vw] leading-[0.9] uppercase tracking-[-0.07em] whitespace-nowrap text-white text-center w-full">
+        <h1 className="giant-text font-serif text-[12vw] leading-[0.9] uppercase tracking-[-0.07em] whitespace-nowrap text-white text-center w-full">
           <span className="block mb-[-1.5vw]">WHERE SPACE</span>
           <span className="block">BREATHES</span>
         </h1>

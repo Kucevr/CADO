@@ -6,25 +6,25 @@ const blogPosts = [
     id: "romance-of-travel",
     date: "Feb 26, 2026",
     title: "The Romance of Travel: What Luxury Trains Can Teach the Cruise World",
-    image: "https://images.unsplash.com/photo-1533604101087-43be4c1fb3a7?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/blog/blog-romance-of-travel.jpeg",
   },
   {
     id: "maximalism",
     date: "Nov 12, 2025",
     title: "More Is More: Why Maximalism Is Making a Bold Return in Hospitality Design",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/blog/blog-maximalism.jpeg",
   },
   {
     id: "miami-design",
     date: "Oct 21, 2025",
     title: "Miami Design: How the City Became a Global Capital of Culture and Creativity",
-    image: "https://images.unsplash.com/photo-1568849676085-51415703900f?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/blog/blog-miami-design.jpeg",
   },
   {
     id: "sustainable-materials",
     date: "Sep 05, 2025",
     title: "Sourcing Sustainable Materials Without Compromising Luxury",
-    image: "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/blog/blog-stone-architecture.jpeg",
   }
 ];
 

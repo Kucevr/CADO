@@ -26,9 +26,9 @@ const Footer = () => {
           <div className="text-xl lg:text-[22px] leading-relaxed font-medium">
             <p className="mb-6">
               Studio CODA<br/>
-              800 South Douglas Road,<br/>
-              Suite 130, La Puerta Del Sol<br/>
-              Coral Gables, FL 33134
+              Praspyekt Nyezalyezhnastsi 116,<br/>
+              Minsk<br/>
+              Belarus 220114
             </p>
             <p>
               <a 
@@ -116,7 +116,7 @@ const Footer = () => {
               <button className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-6 overflow-hidden flex items-center justify-end transition-colors duration-300 group-hover:text-white">
                 <MoveRight strokeWidth={1} className="w-5 h-5 absolute right-0 transition-transform duration-700 ease-[0.16,1,0.3,1] group-hover:translate-x-[200%]" />
                 <div className="absolute right-full flex items-center h-full transition-transform duration-700 ease-[0.16,1,0.3,1] group-hover:translate-x-full">
-                  <div className="h-[1px] bg-current w-[20px] mr-[-4px]"></div>
+                  <div className="h-px bg-current w-5 -mr-1"></div>
                   <MoveRight strokeWidth={1} className="w-5 h-5" />
                 </div>
               </button>
@@ -141,7 +141,20 @@ const Footer = () => {
             Privacy policy
           </Link>
         </div>
-        <div className="w-full md:w-1/4 px-4 hidden md:block"></div>
+        <div className="w-full md:w-1/4 px-4 max-md:hidden">
+          <a
+            href="https://kutsev-studio.by"
+            target="_blank"
+            rel="noopener noreferrer"
+            onMouseEnter={() => setHoveredLink("KutsevStudio")}
+            onMouseLeave={() => setHoveredLink(null)}
+            className={`transition-opacity duration-300 block w-fit ${
+              hoveredLink && hoveredLink !== "KutsevStudio" ? "opacity-30" : "opacity-50 hover:opacity-100"
+            }`}
+          >
+            Website by kutsev-studio
+          </a>
+        </div>
         <div className="w-full md:w-1/4 pl-4 flex justify-end max-md:mt-4">
           <button 
             onClick={scrollToTop} 
