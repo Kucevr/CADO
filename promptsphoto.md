@@ -43,7 +43,21 @@
 | ✅ | `project-1-main.jpeg` | Hotel Lobbies / Ember Pavilion | Ultra-modern living room, organic shapes, desert aesthetic, soft linen sofa, clay walls, ambient lighting `--ar 3:4` |
 | ✅ | `project-2-main.jpeg` | Private Suites / Velora Residence | Minimalist kitchen island made of dark marble, brass faucet, sunset light hitting the surface, cinematic `--ar 3:4` |
 | ✅ | `project-3-main.jpeg` | Spa & Wellness / Still Waters | Brutalist office lobby, concrete pillars, large indoor plants, sculptural furniture `--ar 3:4` |
-| ✅ | `project-4-main.jpeg` | Fine Dining / Noma Brasserie | Luxury hotel suite bedroom, view of the ocean through large windows, white curtains blowing, serene mood `--ar 2:1` |
+| ⬜ | `project-4-main.jpeg` | Fine Dining / Noma Brasserie | Luxury hotel suite bedroom, view of the ocean through large windows, white curtains blowing, serene mood `--ar 2:1` |
+
+---
+
+## 2.1 Все проекты (Projects Page)
+**Путь:** `public/assets/projects/`
+
+| Статус | Файл | Категория | Промпт |
+| :--- | :--- | :--- | :--- |
+| ⬜ | `project-grand-atrium.webp` | Public Spaces / Grand Atrium | Vast modern atrium, glass roof, geometric shadows, indoor trees, minimalist sculpture, soft daylight `--ar 4:3` |
+| ⬜ | `project-allura-suite.webp` | Guestrooms / Allura Vista | Luxury hotel suite with panoramic city view, dark wood paneling, velvet furniture, moody evening light `--ar 4:3` |
+| ⬜ | `project-serene-spa.webp` | Spa & Wellness / Serene Spa | Minimalist spa treatment room, natural stone walls, warm candle light, zen aesthetic `--ar 4:3` |
+| ⬜ | `project-toscana.webp` | Restaurants / Toscana | Upscale Italian restaurant interior, rustic stone walls meet modern glass, olive trees in pots, warm lighting `--ar 4:3` |
+| ⬜ | `project-ocean-lounge.webp` | Public Spaces / Ocean View | Modern coastal lounge, floor to ceiling windows, blue ocean view, white linen sofas, airy atmosphere `--ar 4:3` |
+| ⬜ | `project-sunset-bar.webp` | Bars & Lounges / Sunset Bar | Sophisticated rooftop bar at golden hour, brass accents, dark marble bar top, glowing back-shelf bottles `--ar 4:3` |
 
 ---
 
@@ -80,11 +94,15 @@
 | :--- | :--- | :--- | :--- |
 | ✅ | `blog-process.jpeg` | Slow Luxury / Heritage Railways | Interior of a vintage luxury train compartment, velvet seats, brass fittings, landscape passing outside window, editorial atmosphere `--ar 4:5` |
 | ✅ | `blog-textures.jpeg` | Return of Richness / Layered interiors | Richly layered interior, velvet curtains, layered rugs, warm candlelight, maximalist luxury done tastefully `--ar 4:5` |
-| ✅ | `blog-process.jpeg` | Coastal Modernism / Miami Design | Bright coastal modern apartment, art deco building exterior glimpse, white walls, tropical plant, sea light reflection `--ar 4:5` |
+| ⬜ | `blog-process.jpeg` | Coastal Modernism / Miami Design | Bright coastal modern apartment, art deco building exterior glimpse, white walls, tropical plant, sea light reflection `--ar 4:5` |
+| ⬜ | `blog-featured.webp` | Featured - Mar 10, 2026 | Grand hotel lobby interior, double height ceiling, monumental marble staircase, contemporary art installations, elegant people in evening wear, cinematic lighting `--ar 16:9` |
 | ⬜ | `blog-art-of-restraint.webp` | The Art of Restraint | Hyper-minimal wabi-sabi room, single ceramic vase, rough linen throw, zen stillness, overcast natural light `--ar 4:5` |
 | ⬜ | `blog-stone-architecture.webp` | Stone in Contemporary Architecture | Close up of raw travertine wall texture under raking light, architectural detail photography `--ar 4:5` |
 | ⬜ | `blog-featured.webp` | Featured article card (`BlogFeatured.tsx`) | Panoramic shot of a luxury villa courtyard at golden hour, stone paving, reflecting pool, palm shadows `--ar 16:9` |
 | ⬜ | `blog-process.webp` | Architectural process (`BlogGrid`) | Architectural sketches on a desk, rolls of tracing paper, black fountain pen, morning light, organized chaos aesthetic `--ar 16:10` |
+| ⬜ | `team-jorge.webp` | Jorge Mesa — Founding Partner | Professional portrait, man in his 40s, sharp features, dark suit, architectural background, soft focus, B&W `--ar 1:1` |
+| ⬜ | `team-greg.webp` | Greg Walton — Founding Partner | Professional portrait, man in his 50s, friendly expression, glasses, creative studio setting, natural light `--ar 1:1` |
+| ⬜ | `team-yohandel.webp` | Yohandel Ruiz — Founding Partner | Professional portrait, man in his 30s, energetic look, modern casual business attire, neutral background `--ar 1:1` |
 | ⬜ | `blog-textures.webp` | Abstract texture post | Abstract texture of ripples in sand, minimalist, beige tones, zen-like atmosphere `--ar 16:10` |
 
 ---

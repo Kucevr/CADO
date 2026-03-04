@@ -24,14 +24,14 @@ const projectData: Record<string, {
     category: "Hotel Lobbies",
     year: "2025",
     location: "Coral Gables, FL",
-    heroImage: "/assets/projects/project-1-main.jpeg",
+    heroImage: "/assets/projects/ember-pavilion-hero.jpeg",
     description: "A grand hotel entrance reimagined as a living room — warm tones of burnt sienna meet raw travertine columns, creating a threshold between the everyday and the extraordinary.",
     challenge: "The existing lobby felt cavernous and impersonal, more transit hall than welcoming space. Guests would pass through without pausing, missing the opportunity for connection that defines great hospitality.",
     solution: "We introduced intimate seating clusters anchored by a sculptural fireplace, lowered ceiling planes in key zones, and a palette of smoked oak and hand-rubbed plaster that absorbs sound and invites lingering. Evening light is filtered through perforated bronze screens, casting patterns that shift with the season.",
     galleryImages: [
-      "https://images.unsplash.com/photo-1564078516393-cf04bd966897?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1590490360182-c33d7dc0cc2d?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?q=80&w=1200&auto=format&fit=crop",
+      "/assets/projects/ember-pavilion-1.jpeg",
+      "/assets/projects/ember-pavilion-2.jpeg",
+      "/assets/projects/ember-pavilion-3.jpeg",
     ]
   },
   "velora-residence": {

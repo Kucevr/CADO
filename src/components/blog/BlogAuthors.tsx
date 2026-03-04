@@ -9,10 +9,10 @@ export const BlogAuthors = () => {
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 max-w-5xl mx-auto">
         {[
-          { name: "Javier Calle", role: "Design Director", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" },
-          { name: "Carolina Ocaña", role: "Lead Architect", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop" },
-          { name: "Marco Gonzalez", role: "Partner", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop" },
-          { name: "Elena Rossi", role: "Senior Designer", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" }
+          { name: "Javier Calle", role: "Design Director", image: "/assets/team/team-javier.jpeg" },
+          { name: "Carolina Ocaña", role: "Lead Architect", image: "/assets/team/team-carolina.jpeg" },
+          { name: "Marco Gonzalez", role: "Partner", image: "/assets/team/team-marco.jpeg" },
+          { name: "Elena Rossi", role: "Senior Designer", image: "/assets/team/team-elena.jpeg" }
         ].map((author, i) => (
           <div key={i} className="flex flex-col items-center group cursor-pointer">
             <div className="w-32 h-32 rounded-full overflow-hidden mb-6 filter grayscale group-hover:grayscale-0 transition-all duration-500">

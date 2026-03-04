@@ -11,7 +11,7 @@ const projects = [
     id: "ember-pavilion",
     title: "Ember Pavilion",
     category: "Hotel Lobbies",
-    image: "/assets/projects/project-1-main.jpeg",
+    image: "/assets/projects/ember-pavilion-1.jpeg",
     className: "col-span-2 row-span-2 aspect-[4/5]",
   },
   {

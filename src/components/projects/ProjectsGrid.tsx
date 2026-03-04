@@ -8,40 +8,64 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PROJECTS_DATA = [
   {
+    id: "ember-pavilion",
+    title: "Ember Pavilion",
+    class: "Hotel Lobbies",
+    image: "/assets/projects/ember-pavilion-1.jpeg",
+  },
+  {
+    id: "velora-residence",
+    title: "Velora Residence",
+    class: "Private Suites",
+    image: "/assets/projects/project-2-main.jpeg",
+  },
+  {
+    id: "still-waters-retreat",
+    title: "Still Waters Retreat",
+    class: "Spa & Wellness",
+    image: "/assets/projects/project-3-main.jpeg",
+  },
+  {
+    id: "noma-brasserie",
+    title: "Noma Brasserie",
+    class: "Fine Dining",
+    image: "/assets/projects/project-4-main.jpeg",
+  },
+  {
     id: "grand-atrium",
     title: "Grand Atrium",
     class: "Public Spaces",
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/projects/project-grand-atrium.jpeg",
   },
   {
     id: "allura-vista-suite",
     title: "Allura Vista Suite",
     class: "Guestrooms & Suites",
-    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/projects/project-allura-suite.jpeg",
   },
   {
     id: "serene-spa-and-wellness",
     title: "Serene Spa and Wellness",
     class: "Spa & Fitness",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop",
+    image: "/assets/projects/project-serene-spa.jpeg",
   },
   {
     id: "toscana",
     title: "Toscana",
     class: "Restaurants",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/projects/project-toscana.jpeg",
   },
   {
     id: "ocean-view-lounge",
     title: "Ocean View Lounge",
     class: "Public Spaces",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/projects/project-ocean-lounge.jpeg",
   },
   {
     id: "sunset-bar",
     title: "Sunset Bar",
     class: "Bars & Lounges",
-    image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1200&auto=format&fit=crop",
+    image: "/assets/projects/project-sunset-bar.jpeg",
   }
 ];
 

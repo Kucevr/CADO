@@ -6,12 +6,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const TEAM_MEMBERS = [
-  {name: "Javier Calle", role: "Founding Partner"},
-  {name: "Jorge Mesa", role: "Founding Partner"},
-  {name: "Greg Walton", role: "Founding Partner"},
-  {name: "Yohandel Ruiz", role: "Founding Partner"},
-  {name: "Carolina Ocaña", role: "Design Director"},
-  {name: "Marco Gonzalez", role: "Lead Architect"},
+  {name: "Javier Calle", role: "Founding Partner", image: "/assets/team/team-javier.jpeg"},
+  {name: "Jorge Mesa", role: "Founding Partner", image: "/assets/team/team-jorge.jpeg"},
+  {name: "Greg Walton", role: "Founding Partner", image: "/assets/team/team-greg.jpeg"},
+  {name: "Yohandel Ruiz", role: "Founding Partner", image: "/assets/team/team-yohandel.jpeg"},
+  {name: "Carolina Ocaña", role: "Design Director", image: "/assets/team/team-carolina.jpeg"},
+  {name: "Marco Gonzalez", role: "Lead Architect", image: "/assets/team/team-marco.jpeg"},
 ];
 
 export const AboutTeam = () => {
@@ -50,9 +50,12 @@ export const AboutTeam = () => {
         {TEAM_MEMBERS.map((person, i) => (
           <div key={i} className="group team-card">
             <div className="bg-white/5 aspect-square mb-6 overflow-hidden relative">
-              <div className="w-full h-full bg-white/10 group-hover:scale-105 transition-transform duration-700 blur-[2px] group-hover:blur-0"></div>
-              {/* Decorative grid overlay for the empty image box */}
-              <div className="absolute inset-0 border border-white/10 m-4 opacity-50"></div>
+              <img 
+                src={person.image} 
+                className="w-full h-full object-cover grayscale transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:scale-105" 
+                alt={person.name} 
+              />
+              <div className="absolute inset-0 border border-white/10 m-4 opacity-30 pointer-events-none group-hover:opacity-10 transition-opacity duration-700"></div>
             </div>
             <h4 className="text-2xl font-serif">{person.name}</h4>
             <div className="w-8 h-[1px] bg-white text-white my-3 transition-all duration-300 group-hover:w-16"></div>

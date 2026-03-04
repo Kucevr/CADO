@@ -5,7 +5,7 @@ export const BlogFeatured = () => {
   return (
     <div className="blog-card mb-24 grid grid-cols-1 lg:grid-cols-2 gap-12 group cursor-pointer border-b border-black/10 pb-24">
       <div className="aspect-[4/3] lg:aspect-auto overflow-hidden relative">
-        <img src="https://images.unsplash.com/photo-1542314831-c6a4d1421008?q=80&w=1200&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Featured" />
+        <img src="/assets/blog/blog-featured.jpeg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Featured" />
       </div>
       <div className="flex flex-col justify-center max-lg:order-last">
         <span className="text-sm uppercase tracking-widest text-gray-500 mb-6">Featured - Mar 10, 2026</span>

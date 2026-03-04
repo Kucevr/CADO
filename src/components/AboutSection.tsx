@@ -59,7 +59,7 @@ const AboutSection = () => {
         <div className="mt-20 flex justify-center w-full fade-in-text">
           <div className="parallax-container aspect-[3/4] w-[35%] md:w-[25%] lg:w-[20%] overflow-hidden relative group">
             <img
-              src="public/assets/about/chandelier-detail.jpeg"
+              src="/assets/about/chandelier-detail.jpeg"
               alt="Chandelier Detail"
               className="parallax-img absolute inset-0 w-full h-[130%] object-cover transition-opacity duration-300 group-hover:opacity-80"
             />
