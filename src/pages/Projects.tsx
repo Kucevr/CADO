@@ -20,7 +20,7 @@ const Projects = () => {
         url="https://coda-architecture.vercel.app/projects" 
       />
       {/* Hero Banner with local asset */}
-      <div className="relative w-full h-[60vh] mb-32 group overflow-hidden -mx-[3%]">
+      <div className="relative w-full h-[60vh] mb-32 group overflow-hidden">
         <img 
           src="/assets/hero/project-hero.jpeg" 
           alt="All Projects" 
